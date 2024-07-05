@@ -1,15 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Login } from "./src/components/common";
+import { Login } from "../components/common";
 import { SafeAreaView, Text } from "react-native";
 
-const App: React.FC<void> = () => {
+export default function Page() {
   return (
     <SafeAreaView>
       <StatusBar style="auto" />
-      <Text>Ínicio</Text>
+      <Login />
     </SafeAreaView>
   );
-};
-
-export default App;
+}
