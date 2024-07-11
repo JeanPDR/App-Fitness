@@ -1,12 +1,22 @@
-import { StatusBar } from "expo-status-bar";
-import { Login } from "../components/common";
-import { SafeAreaView, Text } from "react-native";
+import { Home, Welcome } from "@/screens";
+import { View } from "react-native";
 
-export default function Page() {
+export const isSigned = false;
+
+const WelcomeScreen = () => {
   return (
-    <SafeAreaView>
-      <StatusBar style="auto" />
-      <Login />
-    </SafeAreaView>
+    <>
+      {isSigned ? (
+        <View>
+          <Home />
+        </View>
+      ) : (
+        <View>
+          <Welcome />
+        </View>
+      )}
+    </>
   );
-}
+};
+
+export default WelcomeScreen;
